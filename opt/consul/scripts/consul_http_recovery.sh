@@ -29,7 +29,7 @@ curl -X POST -H "Content-Type: application/json" http://172.17.42.1:2375/contain
      "Env":null, 
      "Dns":null, 
      "Cmd": ["sh", "/opt/consul/scripts/consul-client-start.sh",  "consul-sv1"],
-     "Image":"techcircle:consul-cl", 
+     "Image":"techcircle:consul", 
      "Volumes":{}, 
      "VolumesFrom":"", 
      "ExposedPorts": {"80/tcp": {}},
