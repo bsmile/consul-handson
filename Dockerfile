@@ -6,7 +6,10 @@ RUN apt-get -y upgrade
 RUN apt-get -y install nginx wget unzip syslogd dnsutils curl jq git
 RUN wget https://dl.bintray.com/mitchellh/consul/0.5.0_linux_amd64.zip -P /usr/local/src/
 RUN unzip /usr/local/src/0.5.0_linux_amd64.zip -d /usr/local/bin/
-RUN mkdir -p /opt/consul/{conf,dat,webui,scripts}
+RUN mkdir -p /opt/consul/conf
+RUN mkdir -p /opt/consul/dat
+RUN mkdir -p /opt/consul/webui
+RUN mkdir -p /opt/consul/scripts
 RUN wget https://dl.bintray.com/mitchellh/consul/0.5.0_web_ui.zip -P /usr/local/src/
 RUN unzip /usr/local/src/0.5.0_web_ui.zip -d /opt/consul/webui/
 RUN git clone https://github.com/bsmile/consul-handson.git /opt/consul/git
